@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+.termo, .container-crlv, .container-foto-comentario {
+  display: flex;
+  flex-direction: column;
+}

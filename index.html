@@ -11,40 +11,43 @@
 <body>
 
   <h2>TERMO DE RESPON E DOC</h2>
-  <p>O condutor está ciente de que não deve iniciar a
-    rota caso haja qualquer impeditivo que comprometa sua segurança?
-  </p>
-  <label for="termo-sim">
-    <input id="termo-sim" type="radio" name="termo" value="sim" title="Aceito os termos">
-    Sim
-  </label>
-  <label for="termo-nao">
-    <input id="termo-nao" type="radio" name="termo" value="não" title="Aceito os termos">
-    Não
-  </label>
-
-  <h3>CRLV</h3>
-  <p>
-    Anexar foto do CRLV atualizado
-  </p>
-  <label for="crlvsim">
-    <input id="crlvsim" type="radio" name="crlv" value="sim" title="CRLV atualizado">
-    Sim
-  </label>
-  <label for="crlvnao">
-    <input id="crlvnao" type="radio" name="crlv" value="não" title="CRLV atualizado">
-    Não
-  </label>
-
-  <h2>Tirar Foto</h2>
-
-  <div>
-    <label for="foto">Selecione ou tire uma foto</label>
-    <input id="foto" type="file" accept="image/*" title="Tirar foto do documento">
-
-    <label for="comentariocrlv">Comentário sobre o CRLV:
-      <input id="comentariocrlv" type="text" name="comentariocrlv" title="Comentário sobre o CRLV" placeholder="Digite um comentário curto">
+  <div class="termo">
+    <p>O condutor está ciente de que não deve iniciar a
+      rota caso haja qualquer impeditivo que comprometa sua segurança?
+    </p>
+    <label for="termo-sim">
+      <input id="termo-sim" type="radio" name="termo" value="sim" title="Aceito os termos">
+      Sim
     </label>
+    <label for="termo-nao">
+      <input id="termo-nao" type="radio" name="termo" value="não" title="Aceito os termos">
+      Não
+    </label>
+  </div>
+
+  <div class="container-crlv">
+    <h3>CRLV</h3>
+    <p>
+      Anexar foto do CRLV atualizado
+    </p>
+    <label for="crlvsim">
+      <input id="crlvsim" type="radio" name="crlv" value="sim" title="CRLV atualizado">
+      Sim
+    </label>
+    <label for="crlvnao">
+      <input id="crlvnao" type="radio" name="crlv" value="não" title="CRLV atualizado">
+      Não
+    </label>
+
+    <h2>Tirar Foto</h2>
+    <div class="container-foto-comentario">
+      <label for="foto">Selecione ou tire uma foto</label>
+      <input id="foto" type="file" accept="image/*" title="Tirar foto do documento">
+
+      <label for="comentariocrlv">Comentário sobre o CRLV:
+        <input id="comentariocrlv" type="text" name="comentariocrlv" title="Comentário sobre o CRLV" placeholder="Digite um comentário curto">
+      </label>
+    </div>
   </div>
 
   <script src="./scripts/script.js"></script>

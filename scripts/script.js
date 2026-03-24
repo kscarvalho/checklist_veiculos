@@ -51,6 +51,24 @@ function ativaAreaDaFotoCrlv() {
 
 addEventListener('click', ativaAreaDaFotoCrlv);
 
+
+// ATIVAR AREA SEGUNDA IMGCRLV
+const segundaImgCrlv = document.getElementById('previewCrlv1')
+segundaImgCrlv.style.display = "none"
+
+function ativarSegundaAreaFotoCrlv() {
+  if (previewCrlv.click) {
+    segundaImgCrlv.style.display = 'block' 
+  } else {
+    segundaImgCrlv.style.display = 'none'
+  }
+}
+
+previewCrlv.addEventListener('click',  ativarSegundaAreaFotoCrlv)
+
+
+
+// ATIVAR A AREA DE CRLV COMENTARIOS
 const inputNaoCrlv = document.getElementById('crlvnao');
 const comentarioCrlv = document.getElementById('comentariocrlv');
 comentarioCrlv.style.display = 'none';
@@ -64,6 +82,8 @@ function ativaAreaDoComentarioCrlv() {
 }
 
 addEventListener('click', ativaAreaDoComentarioCrlv);
+
+
 
 // ATIVAR A AREA DO CARTÃO
 const inputCartaoSim = document.getElementById('cartaosim');
@@ -80,6 +100,8 @@ function ativaAreaDaFotoCartao() {
 
 addEventListener('click', ativaAreaDaFotoCartao);
 
+
+// ATIVAR A AREA DO CARTÃO COMENTARIOS
 const inputCartaoNao = document.getElementById('cartaonao');
 const comentarioCartao = document.getElementById('comentariocartao');
 comentarioCartao.style.display = 'none';

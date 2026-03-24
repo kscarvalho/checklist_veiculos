@@ -56,12 +56,21 @@ p span {
   outline: none;
 }
 
+.imagensCrlv {
+  display: flex;
+  gap: 30px;
+}
+
 /* visualização da img crlv */
-#previewCrlv {
+#previewCrlv, 
+#previewCrlv1 {
   width: 120px;
   height: 120px;
   object-fit: cover;
+  cursor: pointer;
 }
+
+
 
 /* visualização da img cartão */
 #previewCartao {

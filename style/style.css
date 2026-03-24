@@ -56,8 +56,15 @@ p span {
   outline: none;
 }
 
-/* visualização da img */
-#preview {
+/* visualização da img crlv */
+#previewCrlv {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* visualização da img cartão */
+#previewCartao {
   width: 120px;
   height: 120px;
   object-fit: cover;

@@ -1,29 +1,30 @@
-// PRÉ VISUALIZAÇÃO DA IMG
-const inputImagemCrlv = document.getElementById('arquivo');
-const previewCrlv = document.getElementById('preview');
+// ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CRLV
+const inputImagemCrlv = document.getElementById('adicionarImgCrlv');
+const previewCrlv = document.getElementById('previewCrlv');
 
 inputImagemCrlv.addEventListener('change', function () {
-  const arquivo = this.files[0];
+  const adicionarImgCrlv = this.files[0];
 
-  if (arquivo) {
+  if (adicionarImgCrlv) {
     const leitor1 = new FileReader();
-
     leitor1.onload = function (e) {
       previewCrlv.src = e.target.result;
       previewCrlv.style.display = 'block';
+      3;
     };
 
-    leitor1.readAsDataURL(arquivo);
+    leitor1.readAsDataURL(adicionarImgCrlv);
   }
 });
 
-const inputImagemCartao = document.getElementById('imagemcartao');
-const previewCartao = document.getElementById('preview');
+// ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CARTÃO
+const inputImagemCartao = document.getElementById('adicionarImgCartao');
+const previewCartao = document.getElementById('previewCartao');
 
 inputImagemCartao.addEventListener('change', function () {
-  const imagemcartao = this.files[1];
+  const adicionarImgCartao = this.files[0];
 
-  if (imagemcartao) {
+  if (adicionarImgCartao) {
     const leitor2 = new FileReader();
 
     leitor2.onload = function (e) {
@@ -31,7 +32,7 @@ inputImagemCartao.addEventListener('change', function () {
       previewCartao.style.display = 'block';
     };
 
-    leitor2.readAsDataURL(imagemcartao);
+    leitor2.readAsDataURL(adicionarImgCartao);
   }
 });
 

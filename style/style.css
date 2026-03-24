@@ -4,12 +4,61 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container-geral {
   padding: 10px;
 }
 
+h3 {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  width: 100%;
+}
 
-.termo, .container-crlv, .container-foto-comentario {
+.termo, 
+.container-crlv, 
+.container-foto-comentario, 
+.container-cartao-abasteimento {
   display: flex;
   flex-direction: column;
+  border-bottom: 0.5px solid #000;
+}
+
+.termo label, 
+.container-crlv label,
+.container-cartao-abasteimento label{
+  margin: 10px 5px 5px 5px;
+}
+
+input {
+  cursor: pointer;
+}
+
+p span {
+  white-space: nowrap;
+}
+
+/* INPUT COMENTARIO */
+.comentariocrlv, 
+.comentariocartao {
+  display: flex;
+  resize: none;
+  height: 80px;
+  width: 310px;
+  padding: 5px;
+}
+
+.comentariocrlv:focus {
+  outline: none;
+}
+
+/* visualização da img */
+#preview {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }

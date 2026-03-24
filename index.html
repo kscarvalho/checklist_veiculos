@@ -9,50 +9,75 @@
 </head>
 
 <body>
+  <div class="container-geral">
+    <h3>TERMO DE RESPON E DOC</h3>
+    <div class="termo">
+      <p>O condutor está ciente de que não deve iniciar a
+        rota caso haja qualquer impeditivo que comprometa sua segurança?
+      </p>
+      <label for="termo-sim">
+        <input id="termo-sim" type="radio" name="termo" value="sim" title="Aceito os termos">
+        Sim
+      </label>
+      <label for="termo-nao">
+        <input id="termo-nao" type="radio" name="termo" value="não" title="Aceito os termos">
+        Não
+      </label>
+    </div>
 
-  <h2>TERMO DE RESPON E DOC</h2>
-  <div class="termo">
-    <p>O condutor está ciente de que não deve iniciar a
-      rota caso haja qualquer impeditivo que comprometa sua segurança?
-    </p>
-    <label for="termo-sim">
-      <input id="termo-sim" type="radio" name="termo" value="sim" title="Aceito os termos">
-      Sim
-    </label>
-    <label for="termo-nao">
-      <input id="termo-nao" type="radio" name="termo" value="não" title="Aceito os termos">
-      Não
-    </label>
-  </div>
-
-  <div class="container-crlv">
-    <h3>CRLV</h3>
-    <p>
-      Anexar foto do CRLV atualizado
-    </p>
-    <label for="crlvsim">
-      <input id="crlvsim" type="radio" name="crlv" value="sim" title="CRLV atualizado">
-      Sim
-    </label>
-    <label for="crlvnao">
-      <input id="crlvnao" type="radio" name="crlv" value="não" title="CRLV atualizado">
-      Não
-    </label>
-
-    <h2>Tirar Foto</h2>
-    <div class="container-foto-comentario">
-      <label for="foto">
-        <p>Selecione ou tire uma foto:</p>
-        <input id="foto" type="file" accept="image/*" title="Tirar foto do documento">
+    <h3>CRLV *</h3>
+    <div class="container-crlv">
+      <p>
+        Anexar foto do CRLV atualizado?
+      </p>
+      <label for="crlvsim">
+        <input id="crlvsim" type="radio" name="crlv" value="sim" title="CRLV atualizado">
+        Sim
+      </label>
+      <label for="crlvnao">
+        <input id="crlvnao" type="radio" name="crlv" value="não" title="CRLV atualizado">
+        Não
       </label>
 
-      <label for="comentariocrlv">
-        <p>Comentário sobre o CRLV:</p>
-        <input id="comentariocrlv" type="text" name="comentariocrlv" title="Comentário sobre o CRLV" placeholder="Digite um comentário curto">
+
+      <label for="arquivo" id="areaimagemcrlv" class="botao">
+        <p><span>Adicionar img:</span></p>
+        <img id="preview" alt="" title="Pré-visualização da imagem" />
+        <input type="file" id="arquivo" hidden>
+      </label>
+
+      <label for="comentariocrlv" id="comentariocrlv">
+        <p><span>Qual impedimento?</span></p>
+        <textarea class="comentariocrlv" placeholder="Digite algo"></textarea>
+      </label>
+    </div>
+
+    <h3>CARTÃO DE ABASTECIMENTO *</h3>
+    <div class="container-cartao-abasteimento">
+      <p>
+        Anexar foto e digitar número do cartão de abastecimento
+      </p>
+      <label for="crtaosim">
+        <input id="cartaosim" type="radio" name="cartao" value="sim" title="Carão Abastecimento">
+        Sim
+      </label>
+      <label for="cartaonao">
+        <input id="cartaonao" type="radio" name="cartao" value="não" title="Cartão Abastecimento">
+        Pagamento digital
+      </label>
+
+
+      <label for="imagemcartao" id="areaimagemcartao" class="botao">
+        <p><span>Adicionar img:</span></p>
+        <img id="preview" alt="" title="Pré-visualização da imagem" />
+        <input type="file" id="imagemcartao" hidden>
+      </label>
+
+      <label for="comentariocartao" id="comentariocartao">
+        <textarea class="comentariocartao" placeholder="Digite algo"></textarea>
       </label>
     </div>
   </div>
-
   <script src="./scripts/script.js"></script>
 </body>
 

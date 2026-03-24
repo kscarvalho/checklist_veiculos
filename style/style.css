@@ -58,7 +58,15 @@ p span {
 
 .imagensCrlv {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 20px;
+}
+
+.imgMaisPrimeira {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 /* visualização da img crlv */
@@ -69,7 +77,6 @@ p span {
   object-fit: cover;
   cursor: pointer;
 }
-
 
 
 /* visualização da img cartão */

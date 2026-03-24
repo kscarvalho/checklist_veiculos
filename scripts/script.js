@@ -39,14 +39,18 @@ inputImagemCartao.addEventListener('change', function () {
 // ATIVAR A AREA DE CRLV
 const inputCrlvSim = document.getElementById('crlvsim');
 const areaImagemCrlv = document.getElementById('areaimagemcrlv');
+const botaoSegundaImg = document.querySelector('.imgMaisPrimeira')
 areaImagemCrlv.style.display = 'none';
+botaoSegundaImg.style.display = 'none'
 
 function ativaAreaDaFotoCrlv() {
   if (inputCrlvSim.checked) {
     areaImagemCrlv.style.display = 'block';
+    botaoSegundaImg.style.display = 'block';
   } else {
     areaImagemCrlv.style.display = 'none';
-  }
+    botaoSegundaImg.style.display = 'none';
+  } 
 }
 
 addEventListener('click', ativaAreaDaFotoCrlv);
@@ -57,14 +61,14 @@ const segundaImgCrlv = document.getElementById('previewCrlv1')
 segundaImgCrlv.style.display = "none"
 
 function ativarSegundaAreaFotoCrlv() {
-  if (previewCrlv.click) {
+  if (botaoSegundaImg.click) {
     segundaImgCrlv.style.display = 'block' 
   } else {
     segundaImgCrlv.style.display = 'none'
   }
 }
 
-previewCrlv.addEventListener('click',  ativarSegundaAreaFotoCrlv)
+botaoSegundaImg.addEventListener('click',  ativarSegundaAreaFotoCrlv)
 
 
 

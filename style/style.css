@@ -69,9 +69,9 @@ p span {
   cursor: pointer;
 }
 
-/* visualização da img crlv */
-#previewCrlv, 
-#previewCrlv1 {
+/* visualização da img crlvs */
+#previewCrlvFrente, 
+#previewCrlvVerso {
   width: 120px;
   height: 120px;
   object-fit: cover;
@@ -81,6 +81,12 @@ p span {
 
 /* visualização da img cartão */
 #previewCartao {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+#previewCartao1 {
   width: 120px;
   height: 120px;
   object-fit: cover;

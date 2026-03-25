@@ -1,21 +1,114 @@
-// ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CRLV
-const inputImagemCrlv = document.getElementById('adicionarImgCrlv');
-const previewCrlv = document.getElementById('previewCrlv');
+// ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CRLV FRENTE
+const inputImagemCrlvFrente = document.getElementById('adicionarImgCrlvFrente');
+const previewCrlvFrente = document.getElementById('previewCrlvFrente');
 
-inputImagemCrlv.addEventListener('change', function () {
-  const adicionarImgCrlv = this.files[0];
+inputImagemCrlvFrente.addEventListener('change', function () {
+  const adicionarImgCrlvFrente = this.files[0];
 
-  if (adicionarImgCrlv) {
+  if (adicionarImgCrlvFrente) {
     const leitor1 = new FileReader();
     leitor1.onload = function (e) {
-      previewCrlv.src = e.target.result;
-      previewCrlv.style.display = 'block';
+      previewCrlvFrente.src = e.target.result;
+      previewCrlvFrente.style.display = 'block';
       3;
     };
-
-    leitor1.readAsDataURL(adicionarImgCrlv);
+    leitor1.readAsDataURL(adicionarImgCrlvFrente);
   }
 });
+
+// ATIVAR A PRIMEIRA AREA DE CRLV PARA ADD IMG FRENTE
+const inputCrlvSim = document.getElementById('crlvsim');
+const areaImagemCrlv = document.getElementById('areaimagemcrlvFrente');
+areaImagemCrlv.style.display = 'none';
+
+function ativaAreaDaFotoCrlvFrente() {
+  if (inputCrlvSim.checked) {
+    areaImagemCrlv.style.display = 'block';
+  } else {
+    areaImagemCrlv.style.display = 'none';
+  }
+}
+
+addEventListener('click', ativaAreaDaFotoCrlvFrente);
+
+// ATIVAR A AREA DE CRLV COMENTARIOS
+const inputNaoCrlv = document.getElementById('crlvnao');
+const comentarioCrlv = document.getElementById('comentariocrlv');
+comentarioCrlv.style.display = 'none';
+
+function ativaAreaDoComentarioCrlv() {
+  if (inputNaoCrlv.checked) {
+    comentarioCrlv.style.display = 'block';
+    previewCrlvVerso.style.display = "none"; 
+  } else {
+    comentarioCrlv.style.display = 'none';    
+  }
+}
+
+addEventListener('click', ativaAreaDoComentarioCrlv);
+
+
+
+// BOTÃO PARA ATIVAR ASEGUNDA AREA DE IMG CRLV VERSO
+const botaoSegundaImg = document.querySelector('.imgMaisPrimeira')
+botaoSegundaImg.style.display = 'none'
+function ativarAreaDaFotoCrlvVerso() {
+  if (inputCrlvSim.checked) {
+    botaoSegundaImg.style.display = 'block';
+  } else {
+    botaoSegundaImg.style.display = 'none';
+  } 
+}
+addEventListener('click', ativarAreaDaFotoCrlvVerso);
+
+// ATIVAR AREA SEGUNDA IMG CRLV
+const segundaImgCrlv = document.getElementById('previewCrlvVerso')
+segundaImgCrlv.style.display = "none"
+
+function ativarSegundaAreaFotoCrlvVerso() {
+  if (botaoSegundaImg.click) {
+    segundaImgCrlv.style.display = 'block' 
+  } else {
+    segundaImgCrlv.style.display = 'none'
+  }
+}
+
+botaoSegundaImg.addEventListener('click',  ativarSegundaAreaFotoCrlvVerso)
+
+// ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CRLV VERSO
+const inputImagemCrlvVerso = document.getElementById('adicionarImgCrlvVerso');
+const previewCrlvVerso = document.getElementById('previewCrlvVerso');
+
+inputImagemCrlvVerso.addEventListener('change', function () {
+  const adicionarImgCrlvVerso = this.files[0];
+
+  if (adicionarImgCrlvVerso) {
+    const leitor2 = new FileReader();
+    leitor2.onload = function (e) {
+      previewCrlvVerso.src = e.target.result;
+      previewCrlvVerso.style.display = 'block';
+      3;
+    };
+    leitor2.readAsDataURL(adicionarImgCrlvVerso);
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CARTÃO
 const inputImagemCartao = document.getElementById('adicionarImgCartao');
@@ -35,58 +128,6 @@ inputImagemCartao.addEventListener('change', function () {
     leitor2.readAsDataURL(adicionarImgCartao);
   }
 });
-
-// ATIVAR A AREA DE CRLV
-const inputCrlvSim = document.getElementById('crlvsim');
-const areaImagemCrlv = document.getElementById('areaimagemcrlv');
-const botaoSegundaImg = document.querySelector('.imgMaisPrimeira')
-areaImagemCrlv.style.display = 'none';
-botaoSegundaImg.style.display = 'none'
-
-function ativaAreaDaFotoCrlv() {
-  if (inputCrlvSim.checked) {
-    areaImagemCrlv.style.display = 'block';
-    botaoSegundaImg.style.display = 'block';
-  } else {
-    areaImagemCrlv.style.display = 'none';
-    botaoSegundaImg.style.display = 'none';
-  } 
-}
-
-addEventListener('click', ativaAreaDaFotoCrlv);
-
-
-// ATIVAR AREA SEGUNDA IMGCRLV
-const segundaImgCrlv = document.getElementById('previewCrlv1')
-segundaImgCrlv.style.display = "none"
-
-function ativarSegundaAreaFotoCrlv() {
-  if (botaoSegundaImg.click) {
-    segundaImgCrlv.style.display = 'block' 
-  } else {
-    segundaImgCrlv.style.display = 'none'
-  }
-}
-
-botaoSegundaImg.addEventListener('click',  ativarSegundaAreaFotoCrlv)
-
-
-
-// ATIVAR A AREA DE CRLV COMENTARIOS
-const inputNaoCrlv = document.getElementById('crlvnao');
-const comentarioCrlv = document.getElementById('comentariocrlv');
-comentarioCrlv.style.display = 'none';
-
-function ativaAreaDoComentarioCrlv() {
-  if (inputNaoCrlv.checked) {
-    comentarioCrlv.style.display = 'block';
-  } else {
-    comentarioCrlv.style.display = 'none';
-  }
-}
-
-addEventListener('click', ativaAreaDoComentarioCrlv);
-
 
 
 // ATIVAR A AREA DO CARTÃO
@@ -119,3 +160,4 @@ function ativaAreaDoComentarioCartao() {
 }
 
 addEventListener('click', ativaAreaDoComentarioCartao);
+

@@ -56,13 +56,15 @@ p span {
   outline: none;
 }
 
-.imagensCrlv {
+.imagensCrlv, 
+.imagensCartao {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.imgMaisPrimeira {
+.imgMaisPrimeira,
+.imgMaisSegunda {
   display: flex;
   width: 25px;
   height: 25px;
@@ -80,14 +82,10 @@ p span {
 
 
 /* visualização da img cartão */
-#previewCartao {
+#previewCartaoFrente, 
+#previewCartaoVerso {
   width: 120px;
   height: 120px;
   object-fit: cover;
 }
 
-#previewCartao1 {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-}

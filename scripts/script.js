@@ -96,54 +96,61 @@ inputImagemCrlvVerso.addEventListener('change', function () {
 
 
 
+// ------------------------------------------------------------------------------------
 
 
 
 
+// ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CARTÃO FRENTE
+const inputImagemCartaoFrente = document.getElementById('adicionarImgCartaoFrente');
+const previewCartaoFrente = document.getElementById('previewCartaoFrente');
 
+inputImagemCartaoFrente.addEventListener('change', function () {
+  const adicionarImgCartaoFrente = this.files[0];
 
+  if (adicionarImgCartaoFrente) {
+    const leitor3 = new FileReader();
 
-
-
-
-
-
-
-
-// ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CARTÃO
-const inputImagemCartao = document.getElementById('adicionarImgCartao');
-const previewCartao = document.getElementById('previewCartao');
-
-inputImagemCartao.addEventListener('change', function () {
-  const adicionarImgCartao = this.files[0];
-
-  if (adicionarImgCartao) {
-    const leitor2 = new FileReader();
-
-    leitor2.onload = function (e) {
-      previewCartao.src = e.target.result;
-      previewCartao.style.display = 'block';
+    leitor3.onload = function (e) {
+      previewCartaoFrente.src = e.target.result;
+      previewCartaoFrente.style.display = 'block';
     };
 
-    leitor2.readAsDataURL(adicionarImgCartao);
+    leitor3.readAsDataURL(adicionarImgCartaoFrente);
   }
 });
 
 
-// ATIVAR A AREA DO CARTÃO
+// ATIVAR A PRIMEIRA AREA DE CARTÃO PARA ADD IMG FRENTE
 const inputCartaoSim = document.getElementById('cartaosim');
-const areaImagemCartao = document.getElementById('areaimagemcartao');
+const areaImagemCartao = document.getElementById('areaimagemcartaoFrente');
+const botaoSegundaImgCartao = document.querySelector('.imgMaisSegunda')
+const previewCartaoVerso = document.getElementById('previewCartaoVerso')
 areaImagemCartao.style.display = 'none';
+botaoSegundaImgCartao.style.display = 'none'
+previewCartaoVerso.style.display ='none'
 
-function ativaAreaDaFotoCartao() {
+
+function ativaAreaDaFotoCartaoFrente() {
   if (inputCartaoSim.checked) {
     areaImagemCartao.style.display = 'block';
+    botaoSegundaImgCartao.style.display = 'block'
   } else {
     areaImagemCartao.style.display = 'none';
   }
 }
 
-addEventListener('click', ativaAreaDaFotoCartao);
+addEventListener('click', ativaAreaDaFotoCartaoFrente);
+
+
+function ativarPreviewCartaoVerso() {
+  if (botaoSegundaImgCartao.click) {
+    previewCartaoVerso.style.display ='block'
+  }
+}
+
+botaoSegundaImgCartao.addEventListener('click', ativarPreviewCartaoVerso)
+
 
 
 // ATIVAR A AREA DO CARTÃO COMENTARIOS
@@ -151,9 +158,12 @@ const inputCartaoNao = document.getElementById('cartaonao');
 const comentarioCartao = document.getElementById('comentariocartao');
 comentarioCartao.style.display = 'none';
 
+
 function ativaAreaDoComentarioCartao() {
   if (inputCartaoNao.checked) {
     comentarioCartao.style.display = 'block';
+    botaoSegundaImgCartao.style.display = 'none'
+    previewCartaoVerso.style.display = 'none'
   } else {
     comentarioCartao.style.display = 'none';
   }
@@ -161,3 +171,22 @@ function ativaAreaDoComentarioCartao() {
 
 addEventListener('click', ativaAreaDoComentarioCartao);
 
+
+// ADICIONAR IMG E PRÉ VIASUALIZAÇÃO CARTÃO FRENTE
+const inputImagemCartaoVerso = document.getElementById('adicionarImgCartaoVerso');
+
+
+inputImagemCartaoVerso.addEventListener('change', function () {
+  const adicionarImgCartaoVerso = this.files[0];
+
+  if (adicionarImgCartaoVerso) {
+    const leitor4 = new FileReader();
+
+    leitor4.onload = function (e) {
+      previewCartaoVerso.src = e.target.result;
+      previewCartaoVerso.style.display = 'block';
+    };
+
+    leitor4.readAsDataURL(adicionarImgCartaoVerso);
+  }
+});
